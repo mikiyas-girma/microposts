@@ -12,17 +12,30 @@ const stylesHandler = 'style-loader';
 
 
 const config = {
-    entry: './src/index.js',
+    // entry: './src/index.js',
+    entry: {
+        bundle:  path.resolve(__dirname, './src/index.js'),
+      },
     output: {
         path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js',
+        publicPath: '/build',
     },
     devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'build'),
+            directory: path.join(__dirname, 'src')
+        },
+        port: 3000,
         open: true,
         host: 'localhost',
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'src/index.html',
         }),
 
         // Add your plugins here
