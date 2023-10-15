@@ -19,12 +19,12 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
-        publicPath: '/build',
+        publicPath: '/',
     },
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'build'),
-            directory: path.join(__dirname, 'src')
+            directory: path.join(__dirname, '/')
         },
         port: 1000,
         open: true,
