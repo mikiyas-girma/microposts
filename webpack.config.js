@@ -26,7 +26,7 @@ const config = {
             directory: path.resolve(__dirname, 'build'),
             directory: path.join(__dirname, 'src')
         },
-        port: 3000,
+        port: 1000,
         open: true,
         host: 'localhost',
         hot: true,
