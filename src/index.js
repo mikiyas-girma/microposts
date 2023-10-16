@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', getPosts);
 document.querySelector('.post-submit').addEventListener('click', submitPost);
 
 function getPosts() {
-  http.get('http://localhost:3000/posts')
+  http.get('http://localhost:3001/posts')
   .then( data => ui.showPosts(data))
   .catch( err => console.log(err));
 }
@@ -23,9 +23,12 @@ function submitPost() {
   }
 
   // create brand new post
-  http.post('http://localhost:3000/posts', data)
+  http.post('http://localhost:3001/posts', data)
   .then(data => {
+    ui.showAlert('post added successfully', 'alert alert-success');
+    ui.clearFields();
     getPosts();
   })
   .catch(err => console.log(err));
+
 }

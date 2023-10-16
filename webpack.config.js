@@ -23,8 +23,7 @@ const config = {
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'build'),
-            directory: path.join(__dirname, '/')
+            directory: path.resolve(__dirname, 'src'),
         },
         port: 1000,
         open: true,
@@ -35,7 +34,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            template: 'build/index.html',
         }),
 
         // Add your plugins here
