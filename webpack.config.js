@@ -23,8 +23,8 @@ const config = {
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'build'),
-            directory: path.join(__dirname, '/'),
+            directory: path.resolve(__dirname, '/assets'),
+            directory: path.join(__dirname, '/'),  // must for css to work
         },
         port: 1000,
         open: true,
