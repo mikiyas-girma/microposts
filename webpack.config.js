@@ -19,17 +19,12 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
-        publicPath: '/',
     },
     devServer: {
-        static: {
-            directory: path.resolve(__dirname, '/assets'),
-            directory: path.join(__dirname, '/'),  // must for css to work
-        },
+   
         port: 1000,
         open: true,
         host: 'localhost',
-        hot: true,
         compress: true,
         historyApiFallback: true,
     },
@@ -44,7 +39,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/i,
+                test: /\.(js)$/i,
                 loader: 'babel-loader',
             },
             {
