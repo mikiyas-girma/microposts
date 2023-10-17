@@ -30,17 +30,20 @@ function submitPost(e) {
     body
   }
 
-  // create brand new post
+  if(title == '' || body == '') {
+    ui.showAlert('please fill all the fields', 'alert alert-danger')
+  } else {
+      // create brand new post
   http.post('http://localhost:3001/posts', data)
   .then((data) => {
     ui.showAlert('post added successfully', 'alert alert-success');
     ui.clearFields();
     getPosts();
   })
-    
-    // getPosts();
   
   .catch(err => console.log(err));
+  }
+
 
   e.preventDefault();
 }
