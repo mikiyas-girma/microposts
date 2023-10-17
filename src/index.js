@@ -11,6 +11,9 @@ document.querySelector('.post-submit').addEventListener('click', submitPost);
 // Listen for delete icon click
 document.querySelector('#posts').addEventListener('click', deletePosts);
 
+// Listen for edit state
+document.querySelector('#posts').addEventListener('click', editPosts);
+
 function getPosts() {
   http.get('http://localhost:3001/posts')
   .then( data => ui.showPosts(data))
@@ -58,6 +61,26 @@ function deletePosts(e) {
   e.preventDefault();
 }
 
+function editPosts(e) {
+  if(e.target.parentElement.classList.contains('edit')) {
+    const id = e.target.parentElement.dataset.id;
+    const title = e.target.parentElement.previousElementSibling.previousElementSibling.textContent;
+    const body = e.target.parentElement.previousElementSibling.textContent;
+
+    // console.log(e.target.parentElement.previousElementSibling)
+    const data = {
+      id,
+      title,
+      body
+    }
+
+    // then fill the form with the clicked post
+    ui.fillForm(data);
+
+
+
+  }
+}
 
 
 
