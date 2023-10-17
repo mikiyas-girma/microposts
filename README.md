@@ -37,39 +37,40 @@ Before you begin, ensure you have met the following requirements:
 ```bash
 git clone https://github.com/yourusername/Microposts.git
 cd Microposts
-
-2. Install Project dependecies
+Install project dependencies:
+bash
+Copy code
 npm install
-
-3.Start JSON-Server (simulated REST API) and the development server:
+Start JSON-Server (simulated REST API) and the development server:
+bash
+Copy code
 # Start JSON-Server (simulated REST API)
 npm run json:server
 
 # Start the development server
 npm start
+Open your browser and visit http://localhost:3000 to access the application.
+Usage
+Create microposts by filling out the form.
+Edit or delete microposts using the provided options.
+Development
+To build and bundle the project for production, use:
 
-4.Open your browser and visit http://localhost:3001 to access the application
-
-## Usage
-
-1. Create microposts by filling out the form.
-2. Edit or delete microposts using the provided options.
-
-
-### Development
+bash
+Copy code
 npm run build
-
-### Contributing
+Contributing
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with descriptive messages.
-4. Push your changes to your fork.
-5. Open a pull request to the main repository.
-
-### License
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Make your changes and commit them with descriptive messages.
+Push your changes to your fork.
+Open a pull request to the main repository.
+License
 This project is licensed under the MIT License.
 
+vbnet
+Copy code
 
-
+Remember to replace `"https://github.com/yourusername/Microposts.git"` with the a
