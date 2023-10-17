@@ -50,9 +50,11 @@ npm run json:server
 # Start the development server
 npm start
 Open your browser and visit http://localhost:3000 to access the application.
-Usage
-Create microposts by filling out the form.
-Edit or delete microposts using the provided options.
+### Usage
+
+- Create microposts by filling out the form.
+- Edit or delete microposts using the provided options.
+
 Development
 To build and bundle the project for production, use:
 
@@ -69,8 +71,3 @@ Push your changes to your fork.
 Open a pull request to the main repository.
 License
 This project is licensed under the MIT License.
-
-vbnet
-Copy code
-
-Remember to replace `"https://github.com/yourusername/Microposts.git"` with the a
