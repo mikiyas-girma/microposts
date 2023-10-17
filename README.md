@@ -51,13 +51,13 @@ npm run json:server
 npm start
 Open your browser and visit http://localhost:3000 to access the application.
 
-### Usage
+## Usage
 
 
 - Create microposts by filling out the form.
 - Edit or delete microposts using the provided options.
 
-### Development
+## Development
 
 To build and bundle the project for production, use:
 
