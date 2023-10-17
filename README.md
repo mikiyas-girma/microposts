@@ -42,12 +42,13 @@ Install project dependencies:
 npm install
 ```
 Start JSON-Server (simulated REST API) and the development server:
-# Start JSON-Server (simulated REST API)
-``` npm run json:server
+## Start JSON-Server (simulated REST API)
+```
+npm run json:server
 ```
 
-# Start the development server
-npm start
+## Start the development server
+``` npm start ```
 Open your browser and visit http://localhost:3000 to access the application.
 
 ## Usage
