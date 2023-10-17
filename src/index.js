@@ -14,6 +14,9 @@ document.querySelector('#posts').addEventListener('click', deletePosts);
 // Listen for edit state
 document.querySelector('#posts').addEventListener('click', editPosts);
 
+// Listen for cancel from edit state
+document.querySelector(".card-form").addEventListener('click', cancelEdit )
+
 function getPosts() {
   http.get('http://localhost:3001/posts')
   .then( data => ui.showPosts(data))
@@ -79,10 +82,12 @@ function editPosts(e) {
 
     // then fill the form with the clicked post
     ui.fillForm(data);
-
-
-
   }
+
+}
+
+function cancelEdit() {
+  ui.changeFormState('add');
 }
 
 

@@ -75,6 +75,8 @@ class UI {
     }
   }
 
+
+
   showAlert(message, className) {
     this.clearAlert();
 
@@ -103,6 +105,10 @@ class UI {
     if(currentAlert) {
       currentAlert.remove();
     }
+  }
+
+  clearIdInput() {
+    this.idInput.value = '';
   }
 
   clearFields() {
