@@ -8,12 +8,14 @@ document.addEventListener('DOMContentLoaded', getPosts);
 // listen for post submit
 document.querySelector('.post-submit').addEventListener('click', submitPost);
 
-function getPosts(e) {
+// Listen for delete icon click
+document.querySelector('#posts').addEventListener('click', deletePosts);
+
+function getPosts() {
   http.get('http://localhost:3001/posts')
   .then( data => ui.showPosts(data))
   .catch( err => console.log(err));
 
-  e.preventDefault();
 }
 
 function submitPost(e) {
@@ -39,3 +41,34 @@ function submitPost(e) {
 
   e.preventDefault();
 }
+
+function deletePosts(e) {
+  if(e.target.parentElement.classList.contains('delete')) {
+    const id = e.target.parentElement.dataset.id;
+    if(confirm('are you sure to delete?')) {
+      http.delete(`http://localhost:3001/posts/${id}`)
+      .then( data => {
+        ui.showAlert('post removed', 'alert alert-success');
+        getPosts();
+      })
+      .catch(err => console.log(err));
+    }
+    // console.log('delete link clicked')
+  }
+  e.preventDefault();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
