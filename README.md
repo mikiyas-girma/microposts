@@ -50,11 +50,11 @@ npm start
 
 4.Open your browser and visit http://localhost:3001 to access the application
 
-### Usage
-### Usage
-1. Create microposts by filling out the form.
+## Usage
 
+1. Create microposts by filling out the form.
 2. Edit or delete microposts using the provided options.
+
 
 ### Development
 npm run build
