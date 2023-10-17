@@ -50,18 +50,23 @@ npm run json:server
 # Start the development server
 npm start
 Open your browser and visit http://localhost:3000 to access the application.
+
 ### Usage
+
 
 - Create microposts by filling out the form.
 - Edit or delete microposts using the provided options.
 
-Development
+### Development
+
 To build and bundle the project for production, use:
 
 bash
 Copy code
 npm run build
-Contributing
+
+### Contributing
+
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
 Fork the repository.
@@ -69,5 +74,7 @@ Create a new branch for your feature or bug fix.
 Make your changes and commit them with descriptive messages.
 Push your changes to your fork.
 Open a pull request to the main repository.
-License
+
+### License
+
 This project is licensed under the MIT License.
