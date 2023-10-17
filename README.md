@@ -1,32 +1,53 @@
 # Microposts
 
-Microposts is a simple crud application developed with pure vanilla javascript and with restful apis intergrated with.
+Microposts is a simple web application built with Vanilla JavaScript and the Bootstrap framework. It showcases a basic social media platform for creating, editing, and deleting microposts. Webpack is used for bundling, and a fake REST API is created using JSON-Server to simulate the back-end.
 
-## Installation
+## Table of Contents
 
-1. Clone the repository: `git clone https://github.com/mikiyas-girma/microposts.git`
-2. Install dependencies: `npm install`
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Usage
+## Features
 
-1. Build the project: `npm run build`
-2. Open `dist/index.html` in your browser.
+- Create new microposts with a title and content.
+- Edit existing microposts.
+- Delete microposts.
+- Simulated back-end using JSON-Server.
+- Webpack for bundling and managing project dependencies.
 
-## Development
+## Getting Started
 
-1. Start the development server: `npm run dev`
-2. Open `http://localhost:8080` in your browser.
-3. Make changes to the code in the `src` directory.
-4. The development server will automatically reload the page when changes are made.
+### Prerequisites
 
-## Dependencies
+Before you begin, ensure you have met the following requirements:
 
-List of dependencies used in the project.
+- Node.js installed (v14 or higher).
+- NPM (Node Package Manager) installed.
 
-- Webpack
-- Babel
-- ...
+### Installation
 
-## License
+1. Clone the repository:
 
-This project is licensed under the [MIT License](LICENSE).
+```bash
+git clone https://github.com/yourusername/Microposts.git
+cd Microposts
+
+2. Install Project dependecies
+npm install
+
+3.Start JSON-Server (simulated REST API) and the development server:
+# Start JSON-Server (simulated REST API)
+npm run json:server
+
+# Start the development server
+npm start
+
+4.Open your browser and visit http://localhost:3001 to access the application
+
+
