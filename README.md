@@ -50,4 +50,25 @@ npm start
 
 4.Open your browser and visit http://localhost:3001 to access the application
 
+### Usage
+1. Create microposts by filling out the form.
+
+2. Edit or delete microposts using the provided options.
+
+### Development
+npm run build
+
+### Contributing
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Open a pull request to the main repository.
+
+### License
+This project is licensed under the MIT License.
+
+
 
