@@ -33,19 +33,18 @@ Before you begin, ensure you have met the following requirements:
 ### Installation
 
 1. Clone the repository:
-
-bash
+```
 git clone https://github.com/yourusername/Microposts.git
+```
 cd Microposts
 Install project dependencies:
-bash
-Copy code
+```
 npm install
+```
 Start JSON-Server (simulated REST API) and the development server:
-bash
-Copy code
 # Start JSON-Server (simulated REST API)
-npm run json:server
+``` npm run json:server
+```
 
 # Start the development server
 npm start
@@ -61,10 +60,9 @@ Open your browser and visit http://localhost:3000 to access the application.
 
 To build and bundle the project for production, use:
 
-bash
-Copy code
+```
 npm run build
-
+```
 ### Contributing
 
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
