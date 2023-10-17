@@ -34,7 +34,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
 
-```bash
+bash
 git clone https://github.com/yourusername/Microposts.git
 cd Microposts
 Install project dependencies:
