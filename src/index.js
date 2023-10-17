@@ -24,7 +24,8 @@ function getPosts() {
 
 }
 
-function submitPost(e) {
+function submitPost() {
+  const id = document.querySelector('#id').value;
   const title = document.querySelector('#title').value;
   const body = document.querySelector('#body').value;
 
@@ -36,19 +37,31 @@ function submitPost(e) {
   if(title == '' || body == '') {
     ui.showAlert('please fill all the fields', 'alert alert-danger')
   } else {
+
+    // check for id
+    if(id == '') {
       // create brand new post
-  http.post('http://localhost:3001/posts', data)
-  .then((data) => {
-    ui.showAlert('post added successfully', 'alert alert-success');
-    ui.clearFields();
-    getPosts();
-  })
-  
-  .catch(err => console.log(err));
+      http.post('http://localhost:3001/posts', data)
+      .then((data) => {
+        ui.showAlert('post added successfully', 'alert alert-success');
+        ui.clearFields();
+        getPosts();
+      })
+      
+      .catch(err => console.log(err));
+      
+    } else {
+      // update the existing post
+      http.put(`http://localhost:3001/posts/${id}`, data)
+      .then((data) => {
+        ui.showAlert('post updated successfully', 'alert alert-success');
+        ui.changeFormState('add');
+        getPosts();
+      })
+      
+      .catch(err => console.log(err));
+    }
   }
-
-
-  e.preventDefault();
 }
 
 function deletePosts(e) {
@@ -86,8 +99,10 @@ function editPosts(e) {
 
 }
 
-function cancelEdit() {
-  ui.changeFormState('add');
+function cancelEdit(e) {
+  if(e.target.classList.contains('post-cancel')) {
+    ui.changeFormState('add');
+  }
 }
 
 
